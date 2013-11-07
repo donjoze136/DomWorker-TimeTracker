@@ -1,0 +1,63 @@
+roles :
+- Individual employer
+- Employee
+
+individual employer.:
+
+Feature: Create a new employee and the terms of his contract
+As Individual-Employer
+So that I can give access to employee
+I want to create an account to enable the employee to report hours worked
+
+Feature: View a list of employees and the summary statements
+As Individual-Employer
+So that I can see list of my employees and periods to validate
+I want to see my list of salériés and validation periods for each of them
+
+Feature : See a reporting period in detail a day for an employee
+As Individual-Employer
+So that I can control a period
+I want to see the details of the reported hours for a given period
+
+Feature : Change uncommitted hours keeping the history of the changes
+As Individual-Employer
+So that I can change the hours entered by keeping a history of a change
+I want to change the hours entered for an uncommitted period and keep a history of changes (before -> after )
+
+Feature: Validate a reporting period and calculate the pay period
+As Individual-Employer
+While I can validate a stated period of an employee
+I want to validate a period of a given employee
+
+Feature: See the synthesis period of hours worked and calculated salaries
+As Individual-Employer
+While I can , for a given employee , see the hours worked and salaries by period calculated
+I want to see a list of hours worked for the periods validated for an employee
+
+
+Employee:
+
+Feature: Finalize his account after receiving notification of pre creation of my account
+as Employee
+While I can customize and finalize my access account to be personal
+I want to change my password and fill in the missing elements or modify and save it
+
+Feature: Declaring hours worked for a specific day
+as Employee
+While I can declare my hours done on a given day
+I want to enter the start and end hours and the minutes of any break or status update of a given day
+
+Feature : See a reporting period in detail by day
+as Employee
+While I can see and control a reporting period in detail
+I want to see the detail of a period of reporting
+
+Feature : Change uncommitted hours keeping the history of the changes
+as Employee
+While I can change my statement for a given day in an uncommitted period
+I want to change my statement not validated by a given day
+
+Feature: See the synthesis period of hours worked and calculated salaries
+as Employee
+While I can see my hours worked and calculated salary by period
+I want to see my list of hours worked for the periods validated
