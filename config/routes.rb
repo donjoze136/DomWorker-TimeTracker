@@ -1,4 +1,8 @@
 DomWorkerTimetracker::Application.routes.draw do
+  devise_for :users
+
+  get "welcome/index"
+
   #get "welcome/index"
   #resources :welcome
   # The priority is based upon order of creation:
