@@ -6,21 +6,19 @@ Feature: Create and Edit my employer account
   Scenario Outline: Creating a new account
     Given I am not signed in
     When I go to register 
-    # define this path mapping in features/support/paths.rb, usually as '/users/sign_up'
-    And I fill in "user_email" with "<email>"
-    And I fill in "user_password" with "<password>"
-    And I fill in "user_password_confirmation" with "<password>"
-    And I press "Sign up"
-    Then I should see "A message with a confirmation link has been sent to your email address" 
-    And a confirmation message should be sent to "<email>"
+    And I fill in the register form with "<email>" and "<password>"
+    Then I should see a confirmation page with email sent to "<email>" to confirm
+    
     Then I go to login
     And I fill in "user_email" with "<email>"
     And I fill in "user_password" with "<password>"
     And I press "Sign in"
-    Then I should see "Didn't receive confirmation instructions"
+    Then I should see "You have to confirm your account before continuing"
+    
     When I follow the confirmation link sent to "<email>"
-    Then I should see "Your account was successfully confirmed"
-    And I should see "Logged in as <email>"    
+    #Then I should see "Your account was successfully confirmed"
+    #And 
+    Then I should see "Logged in as <email>"    
 
     Examples:
       | email                | password   |
