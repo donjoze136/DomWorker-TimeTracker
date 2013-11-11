@@ -17,6 +17,10 @@ module NavigationHelpers
       '/'
     when /^register$/
       '/users/sign_up'
+    when /^login$/
+      '/users/sign_in'
+    when /^edit my account$/
+      '/users/edit'
     # Add more mappings here.
     # Here is an example that pulls values out of the Regexp:
     #
